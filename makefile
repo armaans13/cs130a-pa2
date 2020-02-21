@@ -10,7 +10,7 @@ CXXFLAGS = -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-fi
 
 #CXXFLAGS = -std=c++11 -Wall -Wextra -Werror
 
-BINARIES= prog1
+BINARIES= prog1.out
 
 all: ${BINARIES}
 
@@ -18,7 +18,7 @@ prog1: prog1.o MinHeap.o Hash.o Quash.o
 	${CXX} $^ -o $@
 
 tests: ${BINARIES}
-	./prog1
+	./prog1.out
 
 clean:
 	/bin/rm -f ${BINARIES} *.o
