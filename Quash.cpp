@@ -14,7 +14,7 @@ int Quash::insert(int i) {
     if (heapIndex == -1)
         heap.insert(i);
     if (temp == 1)
-        cout << "Item successfully inserted, count = " << temp << endl;
+        cout << "item successfully inserted, count = " << temp << endl;
     else if (temp > 1)
         cout << "item already present, new count = " << temp << endl;
 
@@ -25,7 +25,7 @@ int Quash::insert(int i) {
 int Quash::lookup(int i) {
     int temp = hasher.lookup(i);
     if (temp > 0)
-        cout << "Item found, count = " << temp << endl;
+        cout << "item found, count = " << temp << endl;
     else if (temp == 0)
         cout << "item not found" << endl;
 
@@ -56,6 +56,8 @@ int Quash::deleter(int i) {
         cout << "item count decremented, new count = " << temp << endl;
     } else 
         cout << "item not present in the table" << endl;
+
+    return temp;
 }
 
 void Quash::print() {
