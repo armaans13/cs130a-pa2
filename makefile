@@ -4,11 +4,8 @@ BINARIES= prog1.out
 
 all: ${BINARIES}
 
-prog1.out: prog1.o MinHeap.o Hash.o Quash.o
-	${CXX} $^ -o $@
-
-tests: ${BINARIES}
-	./prog1.out
+prog1.out: prog1.cpp
+	clang++ -o prog1.out prog1.cpp MinHeap.cpp Hash.cpp Quash.cpp
 
 clean:
 	/bin/rm -f ${BINARIES} *.o

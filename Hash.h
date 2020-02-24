@@ -14,7 +14,7 @@ class Hash {
     int hash(int i);
 
     private:
-    std::vector<std::pair<int,int>> hasher[43];
+    std::vector<std::pair<int,int> > hasher[43];
 
 };
 
