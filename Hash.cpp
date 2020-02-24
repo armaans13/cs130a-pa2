@@ -46,5 +46,7 @@ int Hash::deleter(int i) {
 }
 
 int Hash::hash(int i) {
+    while (i < 0)
+        i += 43;
     return i % 43;
 }
