@@ -4,7 +4,7 @@ BINARIES= prog1.out
 
 all: ${BINARIES}
 
-prog1: prog1.o MinHeap.o Hash.o Quash.o
+prog1.out: prog1.o MinHeap.o Hash.o Quash.o
 	${CXX} $^ -o $@
 
 tests: ${BINARIES}
@@ -13,4 +13,3 @@ tests: ${BINARIES}
 clean:
 	/bin/rm -f ${BINARIES} *.o
 
-	
